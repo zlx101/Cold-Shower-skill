@@ -9,7 +9,7 @@
 
 ## 来源与署名
 
-- Idea inspired by: 刘小排老师
+- Idea inspired by: 刘小排r
 - Skill maker: 成云杉
 
 ## 适合场景
