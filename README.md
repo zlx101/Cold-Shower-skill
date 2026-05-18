@@ -1,4 +1,4 @@
-# 泼冷水 Skill
+# Cold Shower Skill / 泼冷水 Skill
 
 > 不要先问 AI「我这想法怎么样」。  
 > 先问：「我这想法最可能在哪里崩？」
@@ -51,14 +51,14 @@ AI 最危险的不是它会犯错，而是它会用同样的热情，帮你把�
 用户级安装：
 
 ```powershell
-git clone https://github.com/zlx101/pls-skill.git "$env:USERPROFILE\.claude\skills\pls-skill"
+git clone https://github.com/zlx101/Cold-Shower-skill.git "$env:USERPROFILE\.claude\skills\pls-skill"
 ```
 
 项目级安装：
 
 ```powershell
 New-Item -ItemType Directory -Force .\.claude\skills | Out-Null
-git clone https://github.com/zlx101/pls-skill.git .\.claude\skills\pls-skill
+git clone https://github.com/zlx101/Cold-Shower-skill.git .\.claude\skills\pls-skill
 ```
 
 使用：
@@ -80,7 +80,7 @@ references/playbooks.md
 ### Codex
 
 ```powershell
-git clone https://github.com/zlx101/pls-skill.git "$env:USERPROFILE\.codex\skills\pls-skill"
+git clone https://github.com/zlx101/Cold-Shower-skill.git "$env:USERPROFILE\.codex\skills\pls-skill"
 ```
 
 使用：
@@ -95,7 +95,7 @@ Use $pls-skill to pressure-test my product idea before implementation.
 
 ```powershell
 New-Item -ItemType Directory -Force .\.cursor\rules | Out-Null
-Copy-Item .\pls-skill\.cursor\rules\pls-skill.mdc .\.cursor\rules\pls-skill.mdc
+Copy-Item .\Cold-Shower-skill\.cursor\rules\pls-skill.mdc .\.cursor\rules\pls-skill.mdc
 ```
 
 使用：
@@ -110,14 +110,14 @@ Copy-Item .\pls-skill\.cursor\rules\pls-skill.mdc .\.cursor\rules\pls-skill.mdc
 
 ```powershell
 New-Item -ItemType Directory -Force .\.trae | Out-Null
-Copy-Item .\pls-skill\.trae\project_rules.md .\.trae\project_rules.md
+Copy-Item .\Cold-Shower-skill\.trae\project_rules.md .\.trae\project_rules.md
 ```
 
 如果你的 Trae 使用 `.trae/rules/project_rules.md`：
 
 ```powershell
 New-Item -ItemType Directory -Force .\.trae\rules | Out-Null
-Copy-Item .\pls-skill\.trae\rules\project_rules.md .\.trae\rules\project_rules.md
+Copy-Item .\Cold-Shower-skill\.trae\rules\project_rules.md .\.trae\rules\project_rules.md
 ```
 
 如果项目里已经有规则文件，把本仓库里的内容追加进去，不要直接覆盖。
