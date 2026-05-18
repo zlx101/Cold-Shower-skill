@@ -44,6 +44,34 @@ Use these patterns as scaffolds. Adapt them to the user's context; do not paste 
 最后给出我必须拿出什么证据才能反驳你。
 ```
 
+## Zou Ji Anti-Flattery Audit
+
+```text
+请用“邹忌审美偏差”审视你接下来本能想给我的回答：
+你哪里可能因为“私我、畏我、有求于我”而过度顺从？
+你最不愿意直接说破的问题是什么？
+如果你不需要讨好我，你会把哪个结论说得更狠？
+最后把回答改成不讨好、不安慰、但可验证的版本。
+```
+
+## AI-Native Startup Stage Gate
+
+```text
+请把我的项目放进 Idea / MVP / Launch / Scale 四阶段里判断。
+不要鼓励我动手，先判断我卡在哪个阶段。
+每个阶段分别指出：目标、最大陷阱、应该用 AI 反驳我的地方、进入下一阶段的证据。
+最后只给一个闸门判定：Proceed / Clarify / Test / Kill。
+```
+
+## Context Drift Technical Debt
+
+```text
+请专门检查这个 AI 辅助生成的代码库是否出现“上下文漂移”：
+规格是否缺失？架构是否前后不一致？命名和边界是否漂移？
+哪些地方说明代码库已经失去连贯心智模型？
+请按会导致未来维护失败的严重程度排序。
+```
+
 ## Market Entry
 
 ```text

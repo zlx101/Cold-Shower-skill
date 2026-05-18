@@ -84,6 +84,104 @@ Gate:
 - Test demand before building depth.
 - Treat MVP as evidence collection, not construction.
 
+## AI-Native Startup Stage Gates
+
+Goal: stop the user from confusing lower build cost with better judgment.
+
+Core rule:
+
+```text
+"我做不出来" no longer proves much. "我选的问题值得做" still requires evidence.
+```
+
+### Idea
+
+Objective: choose a problem that deserves execution.
+
+Traps:
+
+- starting because building is now cheap;
+- using AI to prove the founder right instead of finding disconfirming evidence;
+- describing a broad persona instead of a specific painful workflow;
+- borrowing a market narrative without first-hand evidence.
+
+Cold-water questions:
+
+1. What evidence exists before a prototype?
+2. Who already has this pain badly enough to change behavior?
+3. What would make you admit the idea is not worth building?
+4. Which competitor, internal tool, spreadsheet, or manual workaround is the real incumbent?
+
+Gate:
+
+- Do not proceed to MVP unless there is a named user, painful workflow, current workaround, and falsifiable demand signal.
+
+### MVP
+
+Objective: collect evidence, not finish construction.
+
+Traps:
+
+- treating MVP as a mini product launch;
+- polishing AI-generated code before validating usage;
+- measuring signups instead of repeated use, payment, or recommendation;
+- mistaking "users are impressed" for "users come back."
+
+Cold-water questions:
+
+1. What user behavior would prove the MVP matters?
+2. What retention, payment, or referral signal would change your confidence?
+3. What is the smallest version that can expose willingness to use or pay?
+4. Which feature is vanity polish hiding from evidence collection?
+
+Gate:
+
+- Continue only if users use, return, pay, recommend, or pull the product forward.
+
+### Launch
+
+Objective: turn founder effort into repeatable systems.
+
+Traps:
+
+- mistaking launch noise for PMF;
+- relying on the founder to manually handle growth, support, and operations;
+- treating every user complaint as a roadmap item;
+- adding features before understanding retention.
+
+Cold-water questions:
+
+1. Which part of growth collapses when the founder stops pushing?
+2. What support or ops pattern repeats often enough to systematize?
+3. Which metric proves retention rather than attention?
+4. What should be ignored even if users ask loudly?
+
+Gate:
+
+- Do not scale until growth, product feedback, customer support, and operations have repeatable loops.
+
+### Scale
+
+Objective: compound what others cannot copy quickly.
+
+Traps:
+
+- calling feature count a moat;
+- assuming AI implementation speed is defensibility;
+- ignoring integration depth and workflow lock-in;
+- letting AI-generated technical debt erode the codebase's mental model.
+
+Cold-water questions:
+
+1. What gets stronger as more users use the product?
+2. What domain knowledge or user data improves the workflow?
+3. Which integrations make switching away painful for legitimate reasons?
+4. Where is context drift already making the codebase incoherent?
+
+Gate:
+
+- Scale only around compounding advantages: domain knowledge, proprietary user data, integration depth, and workflow lock-in.
+
 ## Market Entry
 
 Goal: compare the plan against previous deaths, not against the founder's internal movie.

@@ -14,7 +14,9 @@ When this skill is invoked, first read the canonical instructions at `../../../S
 - Do not start with praise. Start with the weakest load-bearing assumption.
 - Attack the plan, not the person.
 - Separate known facts, unverified assumptions, wishes, and borrowed narratives.
+- Use the Zou Ji anti-flattery check: the assistant may be friendly, afraid of user rejection, and incentivized to keep the user engaged.
 - Ask Socratic questions before execution if requirements are vague.
+- Create an evidence ledger: existing evidence, missing evidence, cheapest falsification test, and kill condition.
 - Use six thinking hats when useful: White evidence, Red emotion, Black risk, Yellow durable upside, Green smaller alternatives, Blue decision process.
 - End with `Proceed / Clarify / Test / Kill`.
 - Stop when critique repeats or the objections have credible answers.
