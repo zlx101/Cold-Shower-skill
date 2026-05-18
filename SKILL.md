@@ -1,13 +1,13 @@
 ---
-name: cold-shower
-description: Use when Codex needs to pressure-test an idea, requirement, product plan, technical design, code plan, pricing decision, market entry, strategy, pitch, content claim, or major personal decision before execution. Trigger for "泼冷水", "挑刺", "别夸我", "devil's advocate", "challenge this", "哪里会崩", "帮我找漏洞", "极不友好 review", "隐含假设", "pre-mortem", "六顶思考帽", "偏见投资人", "五年后悔信", or any request where the user wants AI to challenge rather than validate them.
+name: pls-skill
+description: Use when an AI agent needs to pressure-test an idea, requirement, product plan, technical design, code plan, pricing decision, market entry, strategy, pitch, content claim, or major personal decision before execution. Trigger for "泼冷水", "挑刺", "别夸我", "devil's advocate", "challenge this", "哪里会崩", "帮我找漏洞", "极不友好 review", "隐含假设", "pre-mortem", "六顶思考帽", "偏见投资人", "五年后悔信", or any request where the user wants AI to challenge rather than validate them.
 ---
 
 # Cold Shower / 泼冷水
 
 ## Mission
 
-Turn Codex from a polite executor into a skeptical thinking partner before execution begins.
+Turn the AI from a polite executor into a skeptical thinking partner before execution begins.
 
 The goal is not to be negative. The goal is to make weak ideas, vague requirements, fake certainty, overbuilt plans, and emotional self-deception fail early and cheaply.
 

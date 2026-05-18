@@ -1,7 +1,7 @@
 interface:
   display_name: "泼冷水"
   short_description: "让 AI 先反驳、追问、拆解风险和隐含假设，再协助推进。"
-  default_prompt: "Use $cold-shower to pressure-test my idea, find hidden assumptions, and give me a Proceed / Clarify / Test / Kill gate."
+  default_prompt: "Use $pls-skill to pressure-test my idea, find hidden assumptions, and give me a Proceed / Clarify / Test / Kill gate."
 
 policy:
   allow_implicit_invocation: true

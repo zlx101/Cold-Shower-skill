@@ -3,14 +3,23 @@
 > 不要先问 AI「我这想法怎么样」。  
 > 先问：「我这想法最可能在哪里崩？」
 
-一个让 AI 先反驳、追问、拆解风险，再协助推进的 Codex skill。
-
-它的目标不是让 AI 变刻薄，而是让 AI 在写代码、做方案、定产品、调定价、进入市场或做重大个人决定之前，先帮你把自信里最脆的部分打碎。
+一个通用 AI Agent skill / rule，让 AI 在写代码、做方案、定产品、调定价、进入市场或做重大个人决定之前，先反驳、追问、拆解风险，再协助推进。
 
 ## 来源与署名
 
 - Idea inspired by: 刘小排r
 - Skill maker: 成云杉
+
+## 适配范围
+
+| 工具 | 适配方式 |
+| --- | --- |
+| Claude / Claude Code | 标准 Agent Skill：`SKILL.md` |
+| Claude Code 项目级技能 | `.claude/skills/pls-skill/SKILL.md` |
+| Codex | 标准 skill：`SKILL.md` + `agents/openai.yaml` |
+| Cursor | `.cursor/rules/pls-skill.mdc` |
+| Trae | `.trae/project_rules.md` 和 `.trae/rules/project_rules.md` |
+| 其他 Agent | 直接加载 `SKILL.md`，需要模板时加载 `references/` |
 
 ## 适合场景
 
@@ -25,23 +34,85 @@
 
 ## 安装
 
-### Codex
+### Claude Code
 
-把仓库 clone 到 Codex skills 目录：
+用户级安装：
 
 ```powershell
-git clone https://github.com/zlx101/pls-skill.git "$env:USERPROFILE\.codex\skills\cold-shower"
+git clone https://github.com/zlx101/pls-skill.git "$env:USERPROFILE\.claude\skills\pls-skill"
 ```
 
-然后在 Codex 里使用：
+项目级安装：
+
+```powershell
+New-Item -ItemType Directory -Force .\.claude\skills | Out-Null
+git clone https://github.com/zlx101/pls-skill.git .\.claude\skills\pls-skill
+```
+
+使用：
 
 ```text
-Use $cold-shower to pressure-test my product idea before implementation.
+Use pls-skill to pressure-test this plan before implementation.
 ```
+
+### Claude
+
+把仓库打包成包含 `SKILL.md` 的 skill 文件夹后上传。核心文件是：
+
+```text
+SKILL.md
+references/prompts.md
+references/playbooks.md
+```
+
+### Codex
+
+```powershell
+git clone https://github.com/zlx101/pls-skill.git "$env:USERPROFILE\.codex\skills\pls-skill"
+```
+
+使用：
+
+```text
+Use $pls-skill to pressure-test my product idea before implementation.
+```
+
+### Cursor
+
+复制 Cursor 规则到你的项目：
+
+```powershell
+New-Item -ItemType Directory -Force .\.cursor\rules | Out-Null
+Copy-Item .\pls-skill\.cursor\rules\pls-skill.mdc .\.cursor\rules\pls-skill.mdc
+```
+
+使用：
+
+```text
+按 pls-skill 规则，先给这个方案泼冷水。
+```
+
+### Trae
+
+复制或合并 Trae 项目规则。不同 Trae 版本/入口对规则路径支持略有差异，本仓库同时提供两个常见路径；优先使用你当前 Trae 自动生成或识别的那个。
+
+```powershell
+New-Item -ItemType Directory -Force .\.trae | Out-Null
+Copy-Item .\pls-skill\.trae\project_rules.md .\.trae\project_rules.md
+```
+
+如果你的 Trae 使用 `.trae/rules/project_rules.md`：
+
+```powershell
+New-Item -ItemType Directory -Force .\.trae\rules | Out-Null
+Copy-Item .\pls-skill\.trae\rules\project_rules.md .\.trae\rules\project_rules.md
+```
+
+如果项目里已经有规则文件，把本仓库里的内容追加进去，不要直接覆盖。
 
 ### 其他 Agent
 
-把 [SKILL.md](./SKILL.md) 作为 system prompt 或技能说明加载即可。需要更完整模板时，再加载：
+把 [SKILL.md](./SKILL.md) 作为 system prompt、project instruction 或 rule 加载即可。需要更完整模板时，再加载：
 
 - [references/prompts.md](./references/prompts.md)
 - [references/playbooks.md](./references/playbooks.md)
@@ -50,17 +121,17 @@ Use $cold-shower to pressure-test my product idea before implementation.
 
 ```text
 我想做一个 AI 原生的一人公司工具，帮自由职业者自动接单、报价和交付。
-请用 $cold-shower 泼冷水，并给出 Proceed / Clarify / Test / Kill 判定。
+请用 pls-skill 泼冷水，并给出 Proceed / Clarify / Test / Kill 判定。
 ```
 
 ```text
 这个架构方案看起来可行。
-请用 $cold-shower 做一次极不友好的技术 review，重点找隐含假设、过度工程和未来技术债。
+请用 pls-skill 做一次极不友好的技术 review，重点找隐含假设、过度工程和未来技术债。
 ```
 
 ```text
 我想从大厂离职 all in 做独立产品。
-请用 $cold-shower 写一封 5 年后悔信，具体到我会失去什么。
+请用 pls-skill 写一封 5 年后悔信，具体到我会失去什么。
 ```
 
 ## 文件结构
@@ -68,6 +139,13 @@ Use $cold-shower to pressure-test my product idea before implementation.
 ```text
 .
 ├── SKILL.md
+├── .claude/
+│   └── skills/pls-skill/SKILL.md
+├── .cursor/
+│   └── rules/pls-skill.mdc
+├── .trae/
+│   ├── project_rules.md
+│   └── rules/project_rules.md
 ├── agents/
 │   └── openai.yaml
 ├── references/
