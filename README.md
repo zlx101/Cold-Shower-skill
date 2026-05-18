@@ -27,9 +27,9 @@ AI 最危险的不是它会犯错，而是它会用同样的热情，帮你把�
 | 工具 | 适配方式 |
 | --- | --- |
 | Claude / Claude Code | 标准 Agent Skill：`SKILL.md` |
-| Claude Code 项目级技能 | `.claude/skills/pls-skill/SKILL.md` |
+| Claude Code 项目级技能 | `.claude/skills/cold-shower/SKILL.md` |
 | Codex | 标准 skill：`SKILL.md` + `agents/openai.yaml` |
-| Cursor | `.cursor/rules/pls-skill.mdc` |
+| Cursor | `.cursor/rules/cold-shower.mdc` |
 | Trae | `.trae/project_rules.md` 和 `.trae/rules/project_rules.md` |
 | 其他 Agent | 直接加载 `SKILL.md`，需要模板时加载 `references/` |
 
@@ -51,20 +51,20 @@ AI 最危险的不是它会犯错，而是它会用同样的热情，帮你把�
 用户级安装：
 
 ```powershell
-git clone https://github.com/zlx101/Cold-Shower-skill.git "$env:USERPROFILE\.claude\skills\pls-skill"
+git clone https://github.com/zlx101/Cold-Shower-skill.git "$env:USERPROFILE\.claude\skills\cold-shower"
 ```
 
 项目级安装：
 
 ```powershell
 New-Item -ItemType Directory -Force .\.claude\skills | Out-Null
-git clone https://github.com/zlx101/Cold-Shower-skill.git .\.claude\skills\pls-skill
+git clone https://github.com/zlx101/Cold-Shower-skill.git .\.claude\skills\cold-shower
 ```
 
 使用：
 
 ```text
-Use pls-skill to pressure-test this plan before implementation.
+Use cold-shower to pressure-test this plan before implementation.
 ```
 
 ### Claude
@@ -80,13 +80,13 @@ references/playbooks.md
 ### Codex
 
 ```powershell
-git clone https://github.com/zlx101/Cold-Shower-skill.git "$env:USERPROFILE\.codex\skills\pls-skill"
+git clone https://github.com/zlx101/Cold-Shower-skill.git "$env:USERPROFILE\.codex\skills\cold-shower"
 ```
 
 使用：
 
 ```text
-Use $pls-skill to pressure-test my product idea before implementation.
+Use $cold-shower to pressure-test my product idea before implementation.
 ```
 
 ### Cursor
@@ -95,13 +95,13 @@ Use $pls-skill to pressure-test my product idea before implementation.
 
 ```powershell
 New-Item -ItemType Directory -Force .\.cursor\rules | Out-Null
-Copy-Item .\Cold-Shower-skill\.cursor\rules\pls-skill.mdc .\.cursor\rules\pls-skill.mdc
+Copy-Item .\Cold-Shower-skill\.cursor\rules\cold-shower.mdc .\.cursor\rules\cold-shower.mdc
 ```
 
 使用：
 
 ```text
-按 pls-skill 规则，先给这个方案泼冷水。
+按 cold-shower 规则，先给这个方案泼冷水。
 ```
 
 ### Trae
@@ -133,17 +133,17 @@ Copy-Item .\Cold-Shower-skill\.trae\rules\project_rules.md .\.trae\rules\project
 
 ```text
 我想做一个 AI 原生的一人公司工具，帮自由职业者自动接单、报价和交付。
-请用 pls-skill 泼冷水，并给出 Proceed / Clarify / Test / Kill 判定。
+请用 cold-shower 泼冷水，并给出 Proceed / Clarify / Test / Kill 判定。
 ```
 
 ```text
 这个架构方案看起来可行。
-请用 pls-skill 做一次极不友好的技术 review，重点找隐含假设、过度工程和未来技术债。
+请用 cold-shower 做一次极不友好的技术 review，重点找隐含假设、过度工程和未来技术债。
 ```
 
 ```text
 我想从大厂离职 all in 做独立产品。
-请用 pls-skill 写一封 5 年后悔信，具体到我会失去什么。
+请用 cold-shower 写一封 5 年后悔信，具体到我会失去什么。
 ```
 
 ## 文件结构
@@ -152,9 +152,9 @@ Copy-Item .\Cold-Shower-skill\.trae\rules\project_rules.md .\.trae\rules\project
 .
 ├── SKILL.md
 ├── .claude/
-│   └── skills/pls-skill/SKILL.md
+│   └── skills/cold-shower/SKILL.md
 ├── .cursor/
-│   └── rules/pls-skill.mdc
+│   └── rules/cold-shower.mdc
 ├── .trae/
 │   ├── project_rules.md
 │   └── rules/project_rules.md
